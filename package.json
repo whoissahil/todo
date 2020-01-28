@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "A basic todo app using MERN stack deployed on Azure",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whoissahil/todo.git"
+  },
+  "author": "Sahil Sharma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whoissahil/todo/issues"
+  },
+  "homepage": "https://github.com/whoissahil/todo#readme"
+}
