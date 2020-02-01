@@ -13,18 +13,14 @@ app.use(bodyParser.json());
 const db = require('./config/db').dbUrl;
 
 // Connect to Database
+// Connect to Mongo
 mongoose
-    .connect(db, { useNewUrlParser: true, useUnifiedTopology: true}, function (err, db) {
-        if (err) {
-            console.log(err);
-        }
-        else {
-            console.log('connected to ' + db);
-            db.close();
-        }
-    })
-    .then(() => console.log('MongoDB connected...'))
-    .catch(err => console.log(err));
+  .connect(db, { 
+    useNewUrlParser: true,
+    useCreateIndex: true
+  }) // Adding new mongo url parser
+  .then(() => console.log('MongoDB Connected...'))
+  .catch(err => console.log(err));
 
 // Use Routes 
 app.use('/api/items', items);
